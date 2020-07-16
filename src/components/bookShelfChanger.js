@@ -1,17 +1,16 @@
 import React from 'react';
-import Utils from "./../utils.js/utils";
 
-const BookShelfChanger = ({ existingShelfes, book, updateBook }) => {
+const BookShelfChanger = ({ book, updateBook }) => {
   let updatedBookShelf = shelf => {
     updateBook({ book, shelf });
   }
   return (
     <div className="book-shelf-changer">
-      <select defaultValue="move" onChange={e => updatedBookShelf(e.target.value)}>
+      <select value={book.shelf || 'move'} onChange={e => updatedBookShelf(e.target.value)}>
         <option value="move" disabled>Move to...</option>
-        {existingShelfes.map(shelf => (
-          <option key={shelf} value={shelf}>{ Utils.camelCaseToSentence(shelf) }</option>
-        ))}
+        <option value="currentlyReading">currentlyReading</option>
+        <option value="wantToRead">wantToRead</option>
+        <option value="read">read</option>
         <option value="none">None</option>
       </select>
     </div>
