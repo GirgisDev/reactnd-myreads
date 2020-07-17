@@ -35,7 +35,7 @@ class SearchBooks extends Component {
 
   updateBooksShelfes = books => {
     if (!books.length) {
-      this.setState({ loading: false });
+      this.setState({ books: [], loading: false });
       return;
     }
     books.forEach(book => {
