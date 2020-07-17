@@ -6,11 +6,11 @@ const BookShelfChanger = ({ book, updateBook }) => {
   }
   return (
     <div className="book-shelf-changer">
-      <select value={book.shelf || 'move'} onChange={e => updatedBookShelf(e.target.value)}>
+      <select defaultValue={book.shelf || 'none'} onChange={e => updatedBookShelf(e.target.value)}>
         <option value="move" disabled>Move to...</option>
-        <option value="currentlyReading">currentlyReading</option>
-        <option value="wantToRead">wantToRead</option>
-        <option value="read">read</option>
+        <option value="currentlyReading">Currently reading</option>
+        <option value="wantToRead">Want to read</option>
+        <option value="read">Read</option>
         <option value="none">None</option>
       </select>
     </div>

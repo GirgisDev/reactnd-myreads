@@ -24,7 +24,14 @@ body,
 .no-content-message {
   font-size: 1.4rem;
   font-weight: bold;
-  margin: 40px auto;
+  text-align: center;
+}
+
+.no-content-message--with-margin {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 160px auto;
 }
 
 .list-books-title {
@@ -127,6 +134,7 @@ body,
   background-position: center;
   background-repeat: no-repeat;
   background-size: 28px;
+  background-color: #efefef;
   font-size: 0;
   border: none;
   outline: none;

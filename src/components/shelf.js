@@ -1,7 +1,7 @@
 import React from 'react';
 import Book from "./book";
 
-const Shlef = ({shelf, existingShelfes, updateBook}) => {
+const Shlef = ({shelf, updateBook}) => {
   return (
     <div className="bookshelf">
       <h2 className="bookshelf-title">{ shelf.title }</h2>
